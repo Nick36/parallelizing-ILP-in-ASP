@@ -1,0 +1,37 @@
+
+There are two output modes
+1. Human mode (default)
+
+2. Machine mode
+./aspal.py --machine ...
+
+There are three mode of execution.
+
+1. Find one solution (default)
+    ./aspal.py ...
+In this case an iteration is performed on the depth of the rules. The default settings are used as upper bounds.
+
+2. Find all solutions
+    ./aspal.py -a ...
+In this case the given (or default) settings are used.
+
+3. Find the optimal solution
+    ./aspal.py -o ...
+In this case an iteration is performed on the depth of the rules. The default settings are used as upper bounds.
+
+Additional notes:
+
+ execute a file with clingo:
+ ./clingo -n 0 <filename.lp> for all solutions with no optimization statements or just one optimal solution
+ 
+ ./clingo --opt-all <filename.lp> for all optimal solutions
+ 
+ execute a file with ASPAL:
+ ./aspal.py -f <filename.lp>
+ 
+ ./aspal.py -of <filename.lp> for optimal solutions only
+ 
+ execute a file with parallelizer:
+ python parallelizer.py <filename.lp>
+ 
+ python parallelizer.py --optimal  <filename.lp> for optimal solutions only
