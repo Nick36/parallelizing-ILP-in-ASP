@@ -21,6 +21,8 @@ In this case an iteration is performed on the depth of the rules. The default se
 
 Additional notes:
 
+ all files with extension *.lp are example files, except for s.lp, which is needed by aspal.py - do not delete it!
+
  execute a file with clingo:
  ./clingo -n 0 <filename.lp> for all solutions with no optimization statements or just one optimal solution
  
