@@ -21,19 +21,23 @@ In this case an iteration is performed on the depth of the rules. The default se
 
 Additional notes:
 
- all files with extension *.lp are example files, except for s.lp, which is needed by aspal.py - do not delete it!
+ All files with extension *.lp are example files, except for s.lp, which is needed by aspal.py - do not delete it!
 
- execute a file with clingo:
+ Execute a file with clingo:
  ./clingo -n 0 <filename.lp> for all solutions with no optimization statements or just one optimal solution
  
  ./clingo --opt-all <filename.lp> for all optimal solutions
  
- execute a file with ASPAL:
+ Execute a file with ASPAL:
  ./aspal.py -f <filename.lp>
  
  ./aspal.py -of <filename.lp> for optimal solutions only
  
- execute a file with parallelizer:
+ Execute a file with parallelizer:
  python parallelizer.py <filename.lp>
  
  python parallelizer.py --optimal  <filename.lp> for optimal solutions only
+ 
+ Note that parallelizing a logic program, while producing little overhead, 
+ only yields better results for demanding tasks with many dependencies 
+ between head mode declaration predicates.
